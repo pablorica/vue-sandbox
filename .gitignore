@@ -84,6 +84,7 @@ package-lock.json
 !README.md
 !CHANGELOG.md
 !composer.json
+!package.json
 
 # track favicon files, if they exist
 !android-chrome-*.png

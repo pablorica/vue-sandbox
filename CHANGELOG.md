@@ -1,7 +1,11 @@
 # Changelog
 
-All Notable changes to `scss boilerplate` will be documented in this file
+All Notable changes to `vue sandbox` will be documented in this file
 
+
+## 1.6.0
+- Mixed with [Vite](https://vite-plugin-ssr.com/)
+- `vite.config.js` added
 
 ## 1.5.0
 - Mixed with [html5_CSS_JS_JQuery](https://github.com/yogeshswdev/html5_CSS_JavaScript_JQuery_start)

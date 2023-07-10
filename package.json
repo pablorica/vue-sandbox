@@ -1,0 +1,68 @@
+{
+    "name": "@pablorica/scss",
+    "version": "1.6.5",
+    "description": "Vue sandbox with common functions, mixins, helpers and patterns",
+    "main": "index.html",
+    "scripts": {
+        "test": "cleancss -o public/css/style.min.css public/css/style.css",
+        "css": "npm-run-all css-compile css-postcss css-minify",
+        "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --quiet src/scss/theme.scss:public/css/style.css",
+        "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output public/css/ --batch --batch-suffix \".min\" \"public/css/*.css\" \"!public/css/*.min.css\" \"!public/css/*rtl*.css\"",
+        "css-postcss": "postcss --config src/build/postcss.config.js --replace \"public/css/*.css\" \"!public/css/*.rtl*.css\" \"!public/css/*.min.css\"",
+        "js": "npm-run-all js-compile js-minify",
+        "js-compile": "rollup --config src/build/rollup.config.js --sourcemap",
+        "js-minify": "terser --config-file src/build/terser.config.json --output public/js/main.min.js public/js/main.js",
+        "watch": "npm-run-all --parallel watch-run-*",
+        "watch-run-css": "nodemon --watch src/scss/ --ext scss --exec \"npm-run-all css\"",
+        "watch-run-js": "nodemon --watch src/js/ --ext js --exec \"npm-run-all js\"",
+        "dist": "npm-run-all dist-clean dist-build",
+        "dist-build": "node src/build/dist-build.js",
+        "dist-clean": "node src/build/dist-clean.js"
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pablorica/vue-sandbox.git"
+    },
+    "keywords": [
+        "sass",
+        "vue",
+        "babel",
+        "nodemon",
+        "rollup",
+        "terser"
+      ],
+    "author": "Pablo Rica",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/pablorica/vue-sandbox/issues"
+    },
+    "homepage": "https://github.com/pablorica/vue-sandbox",
+    "dependencies": {
+        "avalanche-css": "^1.2.0",
+        "normalize-css": "^2.3.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.19.3",
+        "@babel/preset-env": "^7.19.4",
+        "@rollup/plugin-babel": "^5.3.0",
+        "@rollup/plugin-commonjs": "^21.0.0",
+        "@rollup/plugin-multi-entry": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^13.0.6",
+        "clean-css-cli": "^5.6.1",
+        "del": "^6.0.0",
+        "nodemon": "^2.0.20",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.4.4",
+        "autoprefixer": "^10.4.0",
+        "postcss-cli": "^9.0.2",
+        "browserslist": "^4.18.1",
+        "path": "^0.12.7",
+        "rollup": "^2.79.1",
+        "sass": "^1.55.0",
+        "terser": "^5.15.1",
+        "replace-in-file": "^6.3.5"
+    }
+}
