@@ -1,20 +1,22 @@
 
 
 
-# scss boilerplate
+# Vue.js Sandbox
 
 [![Latest Version on NPM](https://img.shields.io/npm/v/scss.svg?style=flat-square)](https://npmjs.com/package/scss)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
-Simple Github project splash website using html5, SCSS and jquery. Good to learn basic of web development. 
+Simple Github project splash website using html5, SCSS and vue.js. Good to learn the basics of Vue.js v3. 
 
 Based on 
+
+- [vuejs](https://github.com/vuejs)
 - [html5_CSS_JS_JQuery](https://github.com/yogeshswdev/html5_CSS_JavaScript_JQuery_start)
 - [Spatie scss](https://github.com/spatie/scss)
 
 
-### index.html
-copy index_final.html and change it, test it, commit it.
+### vuejs
+Examples of vue.js apps can be found in `pages`.
 
 ### scss
 The package sets some sensible defaults for HTML elements eg.:
