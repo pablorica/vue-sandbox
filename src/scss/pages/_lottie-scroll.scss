@@ -1,0 +1,21 @@
+
+.lottie-scroll {
+    .test-box {
+        margin: 0;
+        padding: 0 !important;
+        height: 75vh;
+        overflow-x: hidden;
+        
+        iframe {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .test-box-1,
+    .test-box-2 {
+        width: 50vw;
+    }
+}
